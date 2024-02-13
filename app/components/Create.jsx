@@ -126,7 +126,7 @@ const Create = () => {
       {loading?  <Loading/>:""}
       <div className='w-full text-center' >
         <h1 className=' text-primary-red text-lg font-bold mx-4'>VIN DECODER</h1>
-        <input type="text"  ref={vinInput} placeholder='Enter Vin Here' className='border-black border-2 rounded-lg px-3' value={"1G1ZD5EU1BF143116"} readOnly/>
+        <input type="text"  ref={vinInput} placeholder='Enter Vin Here' className='border-black border-2 rounded-lg px-3' />
         <button onClick={()=>vinDecoder(vinInput.current.value)} className=' p-2 px-5 mx-3 bg-primary-red rounded-3xl m-auto font-semibold text-white'>Load</button>
       </div>
 
