@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import Logo from "/Users/abjeetsingh/Coding/MLMBackend/mainapi/public/LOGO.png";
+import Logo from "../../public/LOGO.png";
 const Navbar = () => {
   return (
     <div>
