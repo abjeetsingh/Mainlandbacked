@@ -425,7 +425,7 @@ const Create = () => {
                 
               <span>
                 <p className='text-primary-red text-lg font-bold ml-auto'>Description</p>
-                <textarea className=' border-gray-500 bg-slate-100 w-full border-2 rounded-lg px-3 font-semibold h-1/2 resize-none  ' name="" id="" cols="30" rows="10" onChange={(e)=>{
+                <textarea className=' border-gray-500 bg-slate-100 w-full border-2 rounded-lg px-3 font-semibold h-1/2 resize-none  ' name="" id="" cols="30" rows="10"  value={myData.description}  onChange={(e)=>{
                     const val = {...myData, description:e.target.value}
                     setmyData(val)
                   }}/>
