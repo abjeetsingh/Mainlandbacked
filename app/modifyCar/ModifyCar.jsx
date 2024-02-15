@@ -257,29 +257,7 @@ function saveChanges(){
 
         </div>
 
-        <div className=' bg-zinc-100 px-4 py-8  rounded-3xl shadow-lg'>
-            <h1 className=' text-grey text-2xl font-bold mt-4'>Fuel Economy</h1>
-            <div className=' ml-8 mt-4 grid grid-rows-1 grid-cols-2'>
-              
-                  
-                <span>
-                  <p className='text-primary-red text-lg font-bold ml-auto'>City</p>
-                  <input className=' inline border-gray-500 bg-slate-100 h-8 border-2 rounded-lg px-3 font-semibold' value={myData.cityEco} onChange={(e)=>{
-                    const val = {...myData, cityEco:e.target.value}
-                    setmyData(val)
-                  }}/>
-                </span>
-
-                <span>
-                  <p className='text-primary-red text-lg font-bold ml-auto'>Highway</p>
-                  <input className=' inline border-gray-500 bg-slate-100 h-8 border-2 rounded-lg px-3 font-semibold' value={myData.highwayEco} onChange={(e)=>{
-                    const val = {...myData, highwayEco:e.target.value}
-                    setmyData(val)
-                  }}/>
-                </span>
-            </div>
-
-        </div>
+        
 
         <div className=' bg-zinc-100 px-4 py-8  rounded-3xl shadow-lg'>
           <h1 className=' text-grey text-2xl font-bold mt-4'>Pricing</h1>
