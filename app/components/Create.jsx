@@ -78,7 +78,7 @@ const Create = () => {
       highwayEco:Data.mpg?.highway,
       description:"",
       base:"",
-      sellling:"",
+      selling:"",
       images: [String]
     }
     const val = {...myApiData}
