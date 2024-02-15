@@ -76,7 +76,7 @@ const Create = () => {
       doors:Data.numOfDoors,
       cityEco:Data.mpg?.city,
       highwayEco:Data.mpg?.highway,
-      description:"",
+      description:"* GUARANTEED CAR LOAN APPROVAL \n* WE CAN HELP YOU LOWER YOUR PAYMENTS & DEBT \n* NO PAYMENTS FOR 6 MONTHS o.a.c  \n* NO MATTER YOUR CREDIT WE'LL GET TO APPROVED \n* LOWEST PRICES IN THE MARKET \n* SAVE THOUSANDS BUYING QUALITY PRE-OWNED VEHICLES \n* NO OBLIGATION PRE-APPROVAL IN MINUTES  \n* OVER 300 VEHICLE TO CHOOSE FROM, TWO LOCATIONS IN SURREY & LANGLEY \n\n Book Your Test drive  today at Mainland Motors Surrey, 13307 King George Blvd, Surrey BC V3T 2T3.  We can make buying process very convenient and most of it can be completed online or by phone, call us today 778-293-1400  At Mainland Motors we strive to improve the customer experience from all aspects. With over 230+ cars to choose from, our knowledgeable and courteous sales team can help find just the right car to fit anyone's needs! Our  transparent sales process and our expert finance team can get nearly anyone approved with the best rates available. Proudly serving the Lower Mainland, Vancouver, Richmond, North Vancouver, West Vancouver, Surrey, Cloverdale, Squamish, Delta, Sunshine Coast, Chilliwack, Gibsons, Sechelt, Nanaimo, Victoria, Bowen Island, Burnaby, Whistler, Port Moody, Pitt Meadows, Coquitlam, Port Coquitlam, Ladner, Tsawassen, Langley, Maple Ridge, White Rock, Abbotsford, Kelowna, and Vernon.All Vehicles are fully inspected & certified, free Carproof Report is available. Vehicle price does not include doc fee $1495 & taxes, See dealer for more details, some conditions may apply.",
       base:"",
       selling:"",
       images: [String]
