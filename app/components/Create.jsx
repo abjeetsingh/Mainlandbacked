@@ -177,13 +177,13 @@ const Create = () => {
                     setmyData(val)
                   }}>
                       <option value="Select"> Select</option>
-                      <option value="Select"> Sedan</option>
-                      <option value="Select"> SUV</option>
-                      <option value="Select"> Sport</option>
-                      <option value="Select"> Coupe</option>
-                      <option value="Select"> luxury</option>
-                      <option value="Select"> Hatchback</option>
-                      <option value="Select"> Minivan</option>
+                      <option value="Sedan"> Sedan</option>
+                      <option value="SUV"> SUV</option>
+                      <option value="Sport"> Sport</option>
+                      <option value="Coupe"> Coupe</option>
+                      <option value="luxury"> luxury</option>
+                      <option value="Hatchback"> Hatchback</option>
+                      <option value="Minivan"> Minivan</option>
 
                       
                     </select>
