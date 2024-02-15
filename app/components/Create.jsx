@@ -431,6 +431,42 @@ const Create = () => {
                   }}/>
               </span>
 
+              <span>
+                <p className='text-primary-red text-lg font-bold ml-auto'>Mechanical</p>
+                <textarea className=' border-gray-500 bg-slate-100 w-full border-2 rounded-lg px-3 font-semibold h-1/2 resize-none  ' name="" id="" cols="30" rows="10" onChange={(e)=>{
+                    const val = {...myData, Mechanical:e.target.value}
+                    setmyData(val)
+                  }}/>
+              </span>
+              <span>
+                <p className='text-primary-red text-lg font-bold ml-auto'>Exterior</p>
+                <textarea className=' border-gray-500 bg-slate-100 w-full border-2 rounded-lg px-3 font-semibold h-1/2 resize-none  ' name="" id="" cols="30" rows="10" onChange={(e)=>{
+                    const val = {...myData, Exterior:e.target.value}
+                    setmyData(val)
+                  }}/>
+              </span>
+              <span>
+                <p className='text-primary-red text-lg font-bold ml-auto'>Entertainment</p>
+                <textarea className=' border-gray-500 bg-slate-100 w-full border-2 rounded-lg px-3 font-semibold h-1/2 resize-none  ' name="" id="" cols="30" rows="10" onChange={(e)=>{
+                    const val = {...myData, Entertainment:e.target.value}
+                    setmyData(val)
+                  }}/>
+              </span>
+              <span>
+                <p className='text-primary-red text-lg font-bold ml-auto'>Interior</p>
+                <textarea className=' border-gray-500 bg-slate-100 w-full border-2 rounded-lg px-3 font-semibold h-1/2 resize-none  ' name="" id="" cols="30" rows="10" onChange={(e)=>{
+                    const val = {...myData, Interior:e.target.value}
+                    setmyData(val)
+                  }}/>
+              </span>
+              <span>
+                <p className='text-primary-red text-lg font-bold ml-auto'>Safety</p>
+                <textarea className=' border-gray-500 bg-slate-100 w-full border-2 rounded-lg px-3 font-semibold h-1/2 resize-none  ' name="" id="" cols="30" rows="10" onChange={(e)=>{
+                    const val = {...myData, Safety:e.target.value}
+                    setmyData(val)
+                  }}/>
+              </span>
+
               
           </div>
         </div>
