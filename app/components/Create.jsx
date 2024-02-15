@@ -349,7 +349,7 @@ const Create = () => {
 
         </div>
 
-        <div className=' bg-zinc-100 px-4 py-8  rounded-3xl shadow-lg'>
+        {/* <div className=' bg-zinc-100 px-4 py-8  rounded-3xl shadow-lg'>
             <h1 className=' text-grey text-2xl font-bold mt-4'>Fuel Economy</h1>
             <div className=' ml-8 mt-4 grid grid-rows-1 grid-cols-2'>
               
@@ -371,7 +371,7 @@ const Create = () => {
                 </span>
             </div>
 
-        </div>
+        </div> */}
 
         <div className=' bg-zinc-100 px-4 py-8  rounded-3xl shadow-lg'>
           <h1 className=' text-grey text-2xl font-bold mt-4'>Pricing</h1>
@@ -379,7 +379,7 @@ const Create = () => {
             
                 
               <span>
-                <p className='text-primary-red text-lg font-bold ml-auto'>Base Price ($ USD)</p>
+                <p className='text-primary-red text-lg font-bold ml-auto'>Base Price ($ CAD)</p>
                 <input className=' inline border-gray-500 bg-slate-100 h-8 border-2 rounded-lg px-3 font-semibold' onChange={(e)=>{
                     const val = {...myData, base:e.target.value}
                     setmyData(val)
@@ -387,7 +387,7 @@ const Create = () => {
               </span>
 
               <span>
-                <p className='text-primary-red text-lg font-bold ml-auto'>Selling Price($ USD)</p>
+                <p className='text-primary-red text-lg font-bold ml-auto'>Selling Price($ CAD)</p>
                 <input className=' inline border-gray-500 bg-slate-100 h-8 border-2 rounded-lg px-3 font-semibold' onChange={(e)=>{
                     const val = {...myData, selling:e.target.value}
                     setmyData(val)
