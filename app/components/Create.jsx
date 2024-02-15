@@ -409,10 +409,10 @@ const Create = () => {
                     setmyData(val)
                   }}>
                       <option value="Select"> Select</option>
-                      <option value="Select"> Surrey</option>
-                      <option value="Select"> Langley</option>
-                      <option value="Select"> Abbsfort</option>
-                      <option value="Select"> Calgary</option>
+                      <option value="Surrey"> Surrey</option>
+                      <option value="Langley"> Langley</option>
+                      <option value="Abbsfort"> Abbsfort</option>
+                      <option value="Calgary"> Calgary</option>
                     </select>
                 </span>
           </div>
