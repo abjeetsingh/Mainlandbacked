@@ -304,8 +304,12 @@ const Create = () => {
                 
                 <span>
                     <p className='text-primary-red text-lg font-bold '>Exterior Colours</p>
+                    <input className=' inline border-gray-500 bg-slate-100 h-8 border-2 rounded-lg px-3 font-semibold'  onChange={(e)=>{
+                    const val = {...myData, extColor:e.target.value}
+                    setmyData(val)
+                  }}/>
                     
-                    <select className="bg-zinc-100  py-[4px] focus:outline-none focus:border-none" id="" onChange={(e)=>{
+                    {/* <select className="bg-zinc-100  py-[4px] focus:outline-none focus:border-none" id="" onChange={(e)=>{
                     const val = {...myData, extColor:e.target.value}
                     setmyData(val)
                   }}>
@@ -313,13 +317,17 @@ const Create = () => {
                       {
                         Data.colors[1]?.options.map(element => (<option key={element.id} value={element.name}>{element.name}</option>))
                       }
-                    </select>
+                    </select> */}
                 </span>
 
                 <span>
                     <p className='text-primary-red text-lg font-bold '>Interior Colours</p>
+                    <input className=' inline border-gray-500 bg-slate-100 h-8 border-2 rounded-lg px-3 font-semibold'  onChange={(e)=>{
+                    const val = {...myData, intColor:e.target.value}
+                    setmyData(val)
+                  }}/>
                     
-                    <select className="bg-zinc-100  py-[4px] focus:outline-none focus:border-none" id="" onChange={(e)=>{
+                    {/* <select className="bg-zinc-100  py-[4px] focus:outline-none focus:border-none" id="" onChange={(e)=>{
                     const val = {...myData, intColor:e.target.value}
                     setmyData(val)
                   }}>
@@ -327,7 +335,7 @@ const Create = () => {
                       {
                         Data.colors[0]?.options.map(element => (<option key={element.id} value={element.name}>{element.name}</option>))
                       }
-                    </select>
+                    </select> */}
                 </span>
 
                 <span>
