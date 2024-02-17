@@ -90,7 +90,7 @@ const Create = () => {
   async function uploadImages() {
     setloading(true)
     const imageUrls = await Promise.all(selectedImages.map(async (file) => {
-      const storageRef = ref(storage, `${myData.model}/${myData.stock}/${file.path}`);
+      const storageRef = ref(storage, `${myData.model}_${myData.stock}/${file.path}`);
       await uploadBytes(storageRef, file);
       return getDownloadURL(ref(storage, `${myData.model}/${file.path}`));
     }));
