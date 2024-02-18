@@ -118,6 +118,7 @@ const Create = () => {
     setmyData({})
     setData({})
     setloading(false)
+    window.location.reload()
   }
 
 
