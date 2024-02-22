@@ -54,6 +54,7 @@ const Create = () => {
   function setProperty(Data){
     myApiData = {
       id:0,
+      vin:vinInput.current.value,
       liked:false,
       location:String,
       make: Data.make.name,
