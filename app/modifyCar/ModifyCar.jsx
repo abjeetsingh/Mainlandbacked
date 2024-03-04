@@ -61,6 +61,42 @@ function saveChanges(){
 
 
   console.log(myData)
+  const Up = (index) => {
+    const newArr = [...myData?.images];
+    if (!myData?.images[index] || !myData?.images[index - 1]) return;
+    newArr[index] = myData?.images[index - 1];
+    newArr[index - 1] = myData?.images[index];
+    setmyData({...myData, images:newArr});
+  };
+  const Down = (index) => {
+    const newArr = [...myData?.images];
+    if (!myData?.images[index] || !myData?.images[index + 1]) return;
+    newArr[index] = myData?.images[index + 1];
+    newArr[index + 1] = myData?.images[index];
+    setmyData({...myData, images:newArr});
+  };
+
+  const showImages = myData?.images?.map((link, index) => (
+    <div>
+      <span className='flex items-center'>
+            <img width={"200px"} className='inline' src={link} />
+            <button className=' p-2 px-5 mx-3 bg-primary-red rounded-3xl m-auto font-semibold text-white'
+              onClick={() => {
+                Up(index);
+              }}
+            >
+              Up
+            </button>
+            <button className='p-2 px-5 mx-3 bg-primary-red rounded-3xl m-auto font-semibold text-white'
+              onClick={() => {
+                Down(index);
+              }}
+            >
+              Down
+            </button>
+          </span>
+    </div>
+  ))
   
   return (
     myData &&  
@@ -298,10 +334,10 @@ function saveChanges(){
                     setmyData(val)
                   }}>
                       <option value="Select"> Select</option>
-                      <option value="Select"> Surrey</option>
-                      <option value="Select"> Langley</option>
-                      <option value="Select"> Abbsfort</option>
-                      <option value="Select"> Calgary</option>
+                      <option value="Surrey"> Surrey</option>
+                      <option value="Langley"> Langley</option>
+                      <option value="Abbsfort"> Abbsfort</option>
+                      <option value="Calgary"> Calgary</option>
                     </select>
                 </span>
           </div>
@@ -383,9 +419,10 @@ function saveChanges(){
             <button onClick={()=>uploadImages()}>Upload Now</button>
           </div>
         </div> */}
-
+        
+        {showImages}
         <div className='text-center'>
-        <button className=' p-2 px-5 mx-3 bg-primary-red rounded-3xl m-auto font-semibold text-white'
+          <button className=' p-2 px-5 mx-3 bg-primary-red rounded-3xl m-auto font-semibold text-white'
         onClick={() => saveChanges()}>Save Changes</button>
 
         </div>

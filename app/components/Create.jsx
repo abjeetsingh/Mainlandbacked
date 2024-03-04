@@ -19,7 +19,22 @@ const Create = () => {
     )
   }, [])
 
-  
+  const Up = (index) => {
+    const newArr = [...selectedImages];
+    if (!selectedImages[index] || !selectedImages[index - 1]) return;
+    newArr[index] = selectedImages[index - 1];
+    newArr[index - 1] = selectedImages[index];
+    setSelectedImages(newArr);
+  };
+  const Down = (index) => {
+    const newArr = [...selectedImages];
+    if (!selectedImages[index] || !selectedImages[index + 1]) return;
+    newArr[index] = selectedImages[index + 1];
+    newArr[index + 1] = selectedImages[index];
+    setSelectedImages(newArr);
+  };
+
+  console.log(setSelectedImages)
 
   useEffect(() => {
 
@@ -28,9 +43,25 @@ const Create = () => {
 
   const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
 
-  const showImages = selectedImages?.map(file => (
+  const showImages = selectedImages?.map((link, index) => (
     <div>
-      <img src={file.preview} alt="Image" className='w-[200px]' />
+      <span className='flex items-center'>
+            <img width={"200px"} className='inline' src={link.preview} />
+            <button className=' p-2 px-5 mx-3 bg-primary-red rounded-3xl m-auto font-semibold text-white'
+              onClick={() => {
+                Up(index);
+              }}
+            >
+              Up
+            </button>
+            <button className='p-2 px-5 mx-3 bg-primary-red rounded-3xl m-auto font-semibold text-white'
+              onClick={() => {
+                Down(index);
+              }}
+            >
+              Down
+            </button>
+          </span>
     </div>
   ))
 
