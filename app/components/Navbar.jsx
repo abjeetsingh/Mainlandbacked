@@ -47,13 +47,6 @@ const Navbar = () => {
                 </Link>
               </li>
               
-              <li>
-                <Link href="/contact" className="block py-2 pr-4 pl-3 text-gray-500  md:hover:text-primary-red md:p-0 ">
-                  
-                    CONTACT
-                  
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
