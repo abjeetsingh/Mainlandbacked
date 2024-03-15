@@ -46,11 +46,12 @@ const Modify = () => {
       }
     </div>
     <div className='block' onClick={handleShowMore}>
-        <CustomButton
-            title="Show More"
-            containerStyles=" py-[16px] rounded-full bg-primary-red mr-4 "
-            textStyles="text-white text-[14px] leading-[17px] font-bold"
-          />
+        <button
+        className={`custom-btn text-white py-[16px] rounded-full bg-primary-red mr-4`}
+        >
+            Show More
+            
+          </button>
       </div>
     </div>
   )

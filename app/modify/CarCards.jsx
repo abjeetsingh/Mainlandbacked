@@ -10,7 +10,7 @@ import { useRouter } from 'next/router';
 import CustomButton from "./CustomButton";
 
 
-const CarCard = ({data, Carkey }) => {
+const CarCard = ({data }) => {
 
 
   console.log(data.id)
@@ -126,7 +126,7 @@ const CarCard = ({data, Carkey }) => {
 
       <div className="car-card__image">
         <Image
-          src={images[0]}
+          src={images[0]|| "https://emifreecar.com/images-new/offcer-coming-soon.jpg"}
           alt="car model"
           fill
           sizes="(max-width: 900px)"
