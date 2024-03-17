@@ -248,7 +248,14 @@ function saveChanges(){
                     const val = {...myData, config:e.target.value}
                     setmyData(val)
                   }}/>
-              </span>  
+              </span> 
+              <span>
+                <p className='text-primary-red text-lg font-bold ml-auto'>no. of Speed Transmission</p>
+                <input className=' inline border-gray-500 bg-slate-100 h-8 border-2 rounded-lg px-3 font-semibold' value={myData.noOfSpeed} onChange={(e)=>{
+                    const val = {...myData, noOfSpeed:e.target.value}
+                    setmyData(val)
+                  }}/>
+              </span> 
 
               <span>
                 <p className='text-primary-red text-lg font-bold ml-auto'>Transmission</p>

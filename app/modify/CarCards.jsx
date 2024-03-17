@@ -145,7 +145,7 @@ const CarCard = ({data }) => {
               alt="steering wheel"
             />
             <p className="car-card__icon-text">
-              {transmission === "a" ? "Automatic" : "Manual"}
+              {transmission}
             </p>
           </div>
           <div className="car-card__icon">
