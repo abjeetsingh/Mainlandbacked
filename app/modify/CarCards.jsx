@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState, useEffect,Fragment, useRef } from "react";
 import { Dialog, Transition } from '@headlessui/react'
 import { useRouter } from 'next/router';
-
+import axios from "axios";
 
 import CustomButton from "./CustomButton";
 
@@ -36,6 +36,7 @@ const CarCard = ({data }) => {
     
         fetchData();
         setOpen(false)
+        axios.get("https://api.mainlandautogroup.ca/initdata")
         const router = useRouter();
         router.reload();
   }

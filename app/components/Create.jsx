@@ -5,6 +5,7 @@ import {storage} from "../firebase"
 import {useState, useRef} from "react"
 import {ref, getDownloadURL, uploadBytes } from "firebase/storage"
 import Loading from "./Loading"
+import axios from 'axios'
 const Create = () => {
   const [Data, setData] = useState(null);
   const[selectedImages, setSelectedImages] = useState([])
@@ -149,6 +150,7 @@ const Create = () => {
             console.error("Error fetching payment intent:", error.message);
     });
     setmyData({})
+    axios.get("https://api.mainlandautogroup.ca/initdata")
     setData({})
     setloading(false)
     window.location.reload()

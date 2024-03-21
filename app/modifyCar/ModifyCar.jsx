@@ -5,6 +5,7 @@ import {useDropzone} from 'react-dropzone'
 import {storage} from "../firebase"
 import {ref, getDownloadURL, uploadBytes } from "firebase/storage"
 import Loading from "../components/Loading"
+import axios from 'axios';
 // Define ModifyCar component
 const ModifyCar = () => {
   const searchParams = useSearchParams()
@@ -56,6 +57,7 @@ function saveChanges(){
     };
     setloading(false)
     fetchData();
+    axios.get("https://api.mainlandautogroup.ca/initdata")
 }
   
 
