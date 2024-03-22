@@ -6,6 +6,7 @@ import {storage} from "../firebase"
 import {ref, getDownloadURL, uploadBytes } from "firebase/storage"
 import Loading from "../components/Loading"
 import axios from 'axios';
+import toast from 'react-hot-toast';
 // Define ModifyCar component
 const ModifyCar = () => {
   const searchParams = useSearchParams()
@@ -28,8 +29,8 @@ const ModifyCar = () => {
         console.error('Error fetching data:', error.message);
       }
     };
-    setloading(false)
     fetchData();
+    setloading(false)
   }, [key])
   
   //  /update/data/:id
@@ -48,7 +49,10 @@ function saveChanges(){
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
-
+        toast.success("Update Successful",{
+        duration: 6000,
+        position: 'top-center',
+      })
         const result = await response.json();
         setmyData(result);
       } catch (error) {

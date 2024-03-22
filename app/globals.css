@@ -3,33 +3,19 @@
 @tailwind utilities;
 
 .car-card {
-  @apply flex flex-col p-3 justify-center items-start text-black-100 bg-primary-red-100 hover:bg-white hover:shadow-md rounded-3xl w-full;
+  @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-red-100 hover:bg-white hover:shadow-md rounded-3xl w-full;
 }
 
 .car-card__content {
-  @apply w-full flex flex-col items-start;
-}
-
-pre {
-  font-family: monospace;
-  white-space: pre-wrap;
-  /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;
-  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-  word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
+  @apply w-full flex justify-between items-start gap-2;
 }
 
 .car-card__content-title {
-  @apply text-[26px] py-2 leading-[26px] font-bold capitalize;
+  @apply text-[22px] leading-[26px] font-bold capitalize;
 }
 
 .car-card__price {
-  @apply flex my-2 text-[32px] leading-[38px] font-extrabold;
+  @apply flex mt-6 text-[32px] leading-[38px] font-extrabold;
 }
 
 .car-card__price-dollar {
@@ -41,14 +27,10 @@ pre {
 }
 
 .car-card__image {
-  @apply relative object-fill mx-auto !overflow-hidden aspect-[16/12];
-}
+  @apply relative object-fill mx-auto !overflow-hidden aspect-[16/12];}
 
-/* .car-card__icon-container {
-  @apply flex group-hover:invisible w-full justify-around text-grey ;
-} */
 .car-card__icon-container {
-  @apply grid group-hover:invisible w-full grid-cols-3 text-grey items-start;
+  @apply flex w-full justify-between text-grey;
 }
 
 .car-card__icon {
@@ -56,11 +38,11 @@ pre {
 }
 
 .car-card__icon-text {
-  @apply text-[12px] leading-[17px] font-bold text-center;
+  @apply text-[14px] leading-[17px];
 }
 
 .car-card__btn-container {
-  @apply hidden group-hover:flex absolute bottom-0 w-full z-10;
+  @apply  flex justify-around  bottom-0 gap-9 z-10 mt-3;
 }
 
 

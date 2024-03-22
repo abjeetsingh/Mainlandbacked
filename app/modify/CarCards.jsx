@@ -6,6 +6,7 @@ import { useState, useEffect,Fragment, useRef } from "react";
 import { Dialog, Transition } from '@headlessui/react'
 import { useRouter } from 'next/router';
 import axios from "axios";
+import { IoSpeedometer } from "react-icons/io5";
 
 import CustomButton from "./CustomButton";
 
@@ -94,21 +95,13 @@ const CarCard = ({data }) => {
 
 
 
-  const {
-    cityEco,
-    images,
-    make,
-    model,
-    transmission,
-    drive,
-    selling,
-  } = data
+  const { selling, id,odometer, year, make, model, transmission, drive, images }  = data
   
   return (
     <div className="car-card">
       <div className="car-card__content">
         <h2 className="car-card__content-title">
-          {make} {model}
+          {year} {make} {model}
         </h2>
 
         <Image
@@ -122,42 +115,39 @@ const CarCard = ({data }) => {
       </div>
 
       <p className=" text-primary-red pt-2 font-jost font-bold text-lg ">
-        $ {selling}
+         {selling}
       </p>
 
       <div className="car-card__image">
-        <Image
-          src={images[0]|| "https://emifreecar.com/images-new/offcer-coming-soon.jpg"}
-          alt="car model"
-          fill
-          sizes="(max-width: 900px)"
-          priority
-          className="object-contain w-full h-full"
-        />
+        <img
+            src={ images? images[0] :"https://d1csarkz8obe9u.cloudfront.net/posterpreviews/opening-soon%2C-coming-soon-design-template-2ad6ecb3bfc0d528a9999c00a642d447_screen.jpg?ts=1593776133"}
+            alt="car model"
+            className=" h-[full] object-contain overflow-hidden"
+          />
       </div>
 
       <div className="relative flex flex-col w-full mt-2">
         <div className="car-card__icon-container">
-            <div className="car-card__icon capitalize">
-              <Image
-                src="/steering-wheel.svg"
-                width={20}
-                height={20}
-                alt="steering wheel"
-              />
-              <p className="car-card__icon-text capitalize">
-                {transmission?.toLowerCase()}
-              </p>
-            </div>
-            <div className="car-card__icon">
-              <Image src="/tire.svg" width={20} height={20} alt="seat" />
-              <p className="car-card__icon-text capitalize">{drive}</p>
-            </div>
-            <div className="car-card__icon">
-              <IoSpeedometer className="h-[20px] w-full" alt="seat" />
-              <p className="car-card__icon-text">{odometer} Km</p>
-            </div>
+          <div className="car-card__icon">
+            <Image
+              src="/steering-wheel.svg"
+              width={20}
+              height={20}
+              alt="steering wheel"
+            />
+            <p className="car-card__icon-text">
+              {transmission}
+            </p>
           </div>
+          <div className="car-card__icon">
+            <Image src="/tire.svg" width={20} height={20} alt="seat" />
+            <p className="car-card__icon-text">{drive}</p>
+          </div>
+          <div className="car-card__icon">
+            <IoSpeedometer className="h-[20px] w-full" alt="seat" />
+            <p className="car-card__icon-text">{odometer} Km</p>
+          </div>
+        </div>
 
         <div className="car-card__btn-container">
           <CustomButton
