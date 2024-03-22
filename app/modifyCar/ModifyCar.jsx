@@ -171,7 +171,7 @@ function saveChanges(){
           
                 <span>
                   <p className='text-primary-red text-lg font-bold'>Odometer</p>
-                  <input className=' inline border-gray-500 bg-slate-100 h-8 border-2 rounded-lg px-3 font-semibold' placeholder='Odometer Value' onChange={(e)=>{
+                  <input className=' inline border-gray-500 bg-slate-100 h-8 border-2 rounded-lg px-3 font-semibold' value={myData.odometer} onChange={(e)=>{
                     const val = {...myData, odometer:e.target.value}
                     setmyData(val)
                   }}/>
@@ -337,7 +337,7 @@ function saveChanges(){
               </span>
 
               <span>
-                  <p className='text-primary-red text-lg font-bold'>Location</p>
+                  <p className='text-primary-red text-lg font-bold'>Location current = {myData.location}</p>
                 <select className="bg-zinc-100  py-[4px] focus:outline-none" id="" onChange={(e)=>{
                     const val = {...myData, location:e.target.value}
                     setmyData(val)
