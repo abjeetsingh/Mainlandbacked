@@ -138,26 +138,26 @@ const CarCard = ({data }) => {
 
       <div className="relative flex flex-col w-full mt-2">
         <div className="car-card__icon-container">
-          <div className="car-card__icon">
-            <Image
-              src="/steering-wheel.svg"
-              width={20}
-              height={20}
-              alt="steering wheel"
-            />
-            <p className="car-card__icon-text">
-              {transmission}
-            </p>
+            <div className="car-card__icon capitalize">
+              <Image
+                src="/steering-wheel.svg"
+                width={20}
+                height={20}
+                alt="steering wheel"
+              />
+              <p className="car-card__icon-text capitalize">
+                {transmission?.toLowerCase()}
+              </p>
+            </div>
+            <div className="car-card__icon">
+              <Image src="/tire.svg" width={20} height={20} alt="seat" />
+              <p className="car-card__icon-text capitalize">{drive}</p>
+            </div>
+            <div className="car-card__icon">
+              <IoSpeedometer className="h-[20px] w-full" alt="seat" />
+              <p className="car-card__icon-text">{odometer} Km</p>
+            </div>
           </div>
-          <div className="car-card__icon">
-            <Image src="/tire.svg" width={20} height={20} alt="seat" />
-            <p className="car-card__icon-text">{drive}</p>
-          </div>
-          <div className="car-card__icon">
-            <Image src="/gas.svg" width={20} height={20} alt="seat" />
-            <p className="car-card__icon-text">{cityEco} MPG</p>
-          </div>
-        </div>
 
         <div className="car-card__btn-container">
           <CustomButton
