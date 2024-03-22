@@ -55,8 +55,8 @@ function saveChanges(){
         console.error('Error fetching data:', error.message);
       }
     };
-    setloading(false)
     fetchData();
+    setloading(false)
     axios.get("https://api.mainlandautogroup.ca/initdata")
 }
   
